@@ -8,14 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = '';
-  serverName = ''; 
+  serverName = '';
   userName = '';
   servers = ['testServer'];
 
   displayDetails = true;
   hits = [];
   counter = 0;
-  colorC = 'blue';
 
   constructor() {
     setTimeout(() => {
@@ -28,7 +27,7 @@ export class ServersComponent implements OnInit {
 
   onServerCreation() {
     this.serverCreationStatus = "Sever was created, i.e " + this.serverName;
-    this.servers.push(this.serverName); 
+    this.servers.push(this.serverName);
   }
 
   onUpdateServerName(event: Event) {
@@ -37,19 +36,23 @@ export class ServersComponent implements OnInit {
 
   onUpdatingUserName(event: Event) {
     this.userName = (<HTMLInputElement>event.target).value;
-    }
-
+  }
+ 
   onButtonClick() {
     this.userName = '';
   }
 
-  onClickDD(){
+  onClickDD() {
     this.displayDetails = !this.displayDetails
-    this.hits.push(this.counter++ + " "+this.displayDetails);
-    return !this.displayDetails; 
+    this.hits.push(this.hits.length + 1);
+    return !this.displayDetails;
   }
 
-  getColor(){
-    return this.colorC;
+  getColor() {
+    if (this.counter > 5) {
+      return 'blue';
+    }else{
+      return 'white';
     }
+  }
 }

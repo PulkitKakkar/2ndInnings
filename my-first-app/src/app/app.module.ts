@@ -11,7 +11,7 @@ import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
+    ServerComponent, 
     ServersComponent 
   ],
   imports: [
@@ -22,4 +22,4 @@ import { from } from 'rxjs';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 

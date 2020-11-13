@@ -1,4 +1,4 @@
-<!-- <label>Server Name</label>
+<label>Server Name</label>
 <input type="text" class="form-control" [(ngModel)]="serverName">
 
 <button class="btn btn-primary" [disabled]="serverName === ''" (click)="onServerCreation()">Add
@@ -7,14 +7,17 @@
 <ng-template #noServer>
   <p>No Server was created</p>
 </ng-template>
-<app-server *ngFor="let server of servers"></app-server> -->
+<app-server *ngFor="let server of servers"></app-server>
 
-<button class="btn btn-primary" (click)="onClickDD()">Display Details</button>
+<!-- <button class="btn btn-primary" (click)="onClickDD()">Display Details</button>
 <p *ngIf="displayDetails === true; else noDetails">Secret Password = 'tuna'</p>
 <ng-template #noDetails>
 </ng-template>
-<p [ngStyle]="{backgroundColor : getColor()}" [ngClass]="{counterColor: hit === 5}" *ngFor="let hit of hits">{{ hit }}</p>
+<p [ngStyle]="{backgroundColor : hit >= 5 ? 'blue' : 'transparent'}" [ngClass]="{counterColor: hit >= 5}" *ngFor="let hit of hits">{{ hit }}</p>
+<ng-template #noDetails>
+</ng-template>
+ -->
 
 
 <!-- <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: serverStatus === 'online'}">Server with {{ serverID }} is
-  {{ serverStatus }}</p> -->
+  {{ serverStatus }}</p> -->  
