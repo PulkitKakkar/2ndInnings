@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  feature: string = 'Recipe';
+
+  featureSelected(feature: string){
+    this.feature = feature;
+  }
 }
